@@ -1,0 +1,89 @@
+
+
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+.logo,nav{
+    display: flex;
+}
+
+.all-card{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.card{
+    margin: 3rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.card h1{
+    color: blue;
+}
+
+.card h2{
+    text-align: center;
+    background: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
+.logo,nav{
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+nav{
+    background-image: linear-gradient(rgb(11, 11, 250),rgb(65, 2, 2)) ;
+}
+.tool{
+    font-size: 3em;
+    margin-left: 3rem;
+    color: gold;
+}
+
+.card h2 a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.card h2 a:hover{
+    color: gold;
+}
+
+
+@supports (display: grid) {
+    
+    .all-card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 15px;
+    }
+}
+
+@media(max-width:1024px){
+    .tool{
+        font-size: 2.5rem;
+    }
+}
+
+@media(max-width:500px){
+    .tool{
+        font-size: 1.5rem;
+    }
+}
